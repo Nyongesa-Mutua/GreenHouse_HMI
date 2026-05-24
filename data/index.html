@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenhouse Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+	<header>
+		<h1>🌱 Greenhouse Dashboard</h1>
+
+		<div class="mode-indicator">
+			<div id="globe" class="globe"></div>
+			<span id="modeText">AUTO MODE</span>
+		</div>
+	</header>
+
+	<!-- Monitoring Stats -->
+	<section class="card">
+	<h2>Monitoring Stats</h2>
+
+	<div class="stats-grid">
+	<div class="stat-box">
+	<h3>Temperature</h3>
+	<p id="temp">-- °C</p>
+	</div>
+
+	<div class="stat-box">
+	<h3>Humidity</h3>
+	<p id="humidity">-- %</p>
+	</div>
+
+	<div class="stat-box">
+	<h3>Light</h3>
+	<p id="light">-- %</p>
+	</div>
+
+	<div class="stat-box">
+	<h3>Water</h3>
+	<p id="water">-- %</p>
+	</div>
+	</div>
+	</section>
+
+<!-- Plant Features -->
+<section class="card">
+<h2>Plant Profile</h2>
+
+<div class="plant-section">
+
+<img src="plant.png" class="plant-image">
+
+<div class="plant-info">
+<h3 id="plantName">Tomato Plant</h3>
+
+<p>💧 Water: Optimal 60–80% | Current <span id="waterCurrent">--</span></p>
+
+<p>🌡 Temperature: Optimal 20–28°C | Current <span id="tempCurrent">--</span></p>
+
+<p>💨 Humidity: Optimal 50–70% | Current <span id="humidityCurrent">--</span></p>
+
+<p>☀ Light: Optimal 70–90% | Current <span id="lightCurrent">--</span></p>
+</div>
+
+</div>
+</section>
+
+<!-- Device Status -->
+<section class="card">
+<h2>Device Status</h2>
+
+<div class="device-grid">
+
+<div class="device">
+<span>Fan</span>
+<div id="fanStatus" class="status inactive">Inactive</div>
+</div>
+
+<div class="device">
+<span>Pump</span>
+<div id="pumpStatus" class="status inactive">Inactive</div>
+</div>
+
+<div class="device">
+<span>Lights</span>
+<div id="lightStatus" class="status inactive">Inactive</div>
+</div>
+
+</div>
+</section>
+
+<!-- Controls -->
+<section class="card">
+<h2>Controls</h2>
+
+<div class="button-group">
+<button onclick="setAuto()">AUTO</button>
+<button onclick="togglePump()">TOGGLE PUMP</button>
+<button onclick="toggleFan()">TOGGLE FAN</button>
+<button onclick="toggleLights()">TOGGLE LIGHTS</button>
+</div>
+</section>
+
+<!-- Logger -->
+<section class="card">
+<h2>System Log</h2>
+
+<div id="logger" class="logger"></div>
+</section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

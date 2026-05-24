@@ -1,2 +1,1 @@
-# GreenHouse_HMI
-Green-house Control
+***** Greenhouse Controller Project *****
