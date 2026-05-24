@@ -47,11 +47,8 @@ static const int LIGHT_THRESHOLD = 1500;
 // Timer ISR
 hw_timer_t *timer = NULL;
 
-//const char* ssid = "Dynamic";
-//const char* password = "1234STLV567";
-
-const char* ssid = "SM22ABx";
-const char* password = "uopy2843";
+const char* ssid = "";
+const char* password = "";
 
 AsyncWebServer server(80);
 AsyncWebSocket ws("/ws");
